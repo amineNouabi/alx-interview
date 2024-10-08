@@ -9,7 +9,8 @@ Solution for lock boxes problem
 
 def unlock(boxes, openedBoxes, currentIndex):
     """ Recursive unlocking of boxes """
-    if currentIndex < 0 or currentIndex >= len(boxes) or openedBoxes[currentIndex]:
+    if currentIndex < 0 or currentIndex >= len(boxes) \
+            or openedBoxes[currentIndex]:
         return
 
     openedBoxes[currentIndex] = True
