@@ -27,8 +27,8 @@ request.get(`${API_URL}/films/${filmId}`, {}, async (error, response, body) => {
     return tokens[tokens.length - 2];
   });
 
-  charactersIds.forEach(async (characterId) => {
+  for (const characterId of charactersIds) {
     const character = await fetchCharacter(characterId);
     console.log(character.name);
-  });
+  }
 });
