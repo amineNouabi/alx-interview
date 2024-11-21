@@ -9,7 +9,7 @@ def transpose_2d_matrix(matrix):
     """
     n = len(matrix)
     i = 0
-    while i <= n // 2:
+    while i < n - 1:
         j = i + 1
         while j < n:
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
